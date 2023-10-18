@@ -26,6 +26,10 @@ function Time() {
         setMinute(0)
     }
 
+    function pause() {
+        clearInterval(interval.current)
+    }
+
     function reset() {
         clearInterval(interval.current)
         setSecond(0)
@@ -48,6 +52,8 @@ function Time() {
                 h-10
                 w-24
                 rounded-lg
+                shadow-md
+                hover:shadow-green-700/70
                 bg-green-600
                 m-5
                 hover:bg-green-700
@@ -59,6 +65,9 @@ function Time() {
                 h-10
                 w-24
                 rounded-lg
+                shadow-md
+                border-solid-black
+                hover:shadow-yellow-600/60
                 bg-yellow-500
                 text-black
                 m-5
@@ -71,10 +80,13 @@ function Time() {
                 h-10
                 w-24
                 rounded-lg
+                shadow-md
+                hover:shadow-red-600/60
                 bg-red-500
                 m-5
                 hover:bg-red-600
-                text-black'>Mark
+                text-black'
+                onClick={pause}>Stop
                 </button>
                 
             </div>
