@@ -35,10 +35,49 @@ function Time() {
 
     return (
         <>
-            <div className='text-9xl mb-10'>{hour} : {minute} : {second}</div>
-            <button className='bg-green-600 hover:bg-green-700 text-black' onClick={start}>Start</button>
-            <button className='bg-yellow-500 text-black hover:bg-yellow-600 ml-10 mr-10' onClick={reset}>Reset</button>
-            <button className='bg-red-500 hover:bg-red-600 text-black'>Mark</button>
+            <div className='
+            text-9xl 
+            mb-10
+            text-center
+            mt-48
+            text-white'>{hour} : {minute} : {second}
+            </div>
+
+            <div className='flex justify-center items-center w-full h-20'>
+                <button className='
+                h-10
+                w-24
+                rounded-lg
+                bg-green-600
+                m-5
+                hover:bg-green-700
+                text-black' onClick={start}>Start
+                </button>
+
+
+                <button className='
+                h-10
+                w-24
+                rounded-lg
+                bg-yellow-500
+                text-black
+                m-5
+                hover:bg-yellow-600
+                ' onClick={reset}>Reset
+                </button>
+
+
+                <button className='
+                h-10
+                w-24
+                rounded-lg
+                bg-red-500
+                m-5
+                hover:bg-red-600
+                text-black'>Mark
+                </button>
+                
+            </div>
         </>
     )
 }
